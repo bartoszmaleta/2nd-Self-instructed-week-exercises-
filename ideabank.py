@@ -1,3 +1,8 @@
+# import sys
+
+"""
+
+"""
 # ideabank = open('bank_of_ideas.txt', 'a')
 # idea = input('What is your new idea: ')
 
@@ -15,10 +20,23 @@ with open("bank_of_ideas.txt", "a") as ideabank:
     ideabank.write(idea + "\n") 
    
 
-with open("bank_of_ideast.txt", "r") as ideabank:
+with open("bank_of_ideas.txt", "r") as ideabank:
     for i, line in enumerate(ideabank):
         
         print(f'{format(i+1)} {line.strip()}')
         
         #  print('{} {}'.format(i+1, line.strip()))
         # print (ideabank.read())
+
+ideabank = open('bank_of_ideas.txt', 'r')
+list_of_ideas = []
+for line in ideabank:
+    list_of_ideas.append(line.strip())
+ideabank.close()
+
+# if sys.argv[1] == '--list':
+#     for line in list_of_ideas:
+#         print(line)
+
+
+
