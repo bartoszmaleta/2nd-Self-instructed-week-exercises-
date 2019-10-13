@@ -15,5 +15,12 @@ def dice():
     d2 = random.randrange(1, 6)
     print('     Deffender: ', d1, '-', d2)
 
+    x = a1 - d1
+    y = a1 - d2
+
+    print('\n Outcome:')
+    print('    Attacker: Lost', x, 'unit')
+    print('    Defender: Lost', y, 'unit')
+
 
 dice()
