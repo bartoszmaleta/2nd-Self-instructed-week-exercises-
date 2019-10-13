@@ -1,4 +1,4 @@
-number_of_prints_str = input("How many numbers of fibonacci sequence jou want? ")
+number_of_prints_str = input("How many numbers of fibonacci sequence you want? ")
 number_of_prints = int(number_of_prints_str)
 
 k = 0
@@ -6,7 +6,7 @@ j = 1
 fib = 0
 i = 1
 list_of_prints = [0]
-list_of_ids = [1]
+
 
 if number_of_prints <= 0:
     print('Enter positive int')
@@ -23,18 +23,28 @@ else:
         i += 1
 
 
-# this works:
+# this works: (just prints list)
 # for x in list_of_prints:
 #     print(x)
 
-# print(list_of_ids)
+# TODO: add function for below loop
 
-# for id in range(30):
-#     id += 1
-#     fibo_number = list_of_prints[0]
-#     print(format(id, '4d'), end='')
-#     for x in list_of_prints:
-#         print(x)
-
-for x, line in enumerate(list_of_prints):
-    print(f'{format(x+1)} {line}')
+for x, value in enumerate(list_of_prints):
+    if (x + 1) < 10:
+        print(str(x + 1) + ':', '{:>40}'.format(value))
+    elif int(x + 1) == 10:
+        print(str(x + 1) + ':', '{:>39}'.format(value))
+    elif int(x + 1) > 10 and int(x + 1) < 100:
+        print(str(x + 1) + ':', '{:>39}'.format(value))
+    elif int(x + 1) == 100:
+        print(str(x + 1) + ':', '{:>38}'.format(value))
+    elif int(x + 1) > 100:
+        print(str(x + 1) + ':', '{:>38}'.format(value))
+    # else:
+    #     print('too much')
+    
+    # for line in list_of_prints:
+    #     print('{:>8}'.format(line))
+    # print(end=':')
+    # print(f'{x+1} {value}')  # end=':')
+    # print('{}{}'.format)
