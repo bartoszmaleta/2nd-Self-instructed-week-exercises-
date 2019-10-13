@@ -19,6 +19,7 @@ def nextline():
 
 def result(N):
     for number in range(N):
+        # 208 is the number of 25 results!! just change N -> 208
         if number % 7 == 0 or number % 9 == 0:
             number_str = str(number)
             number_length = len(str(number))
