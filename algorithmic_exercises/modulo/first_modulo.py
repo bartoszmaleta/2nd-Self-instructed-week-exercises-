@@ -1,14 +1,7 @@
 # TODO appending to list!!!!
 # output is: all 3-digits numbers which are divisable by 7 or 9
 # can't make: adding numbers to list!
-# ____________________
 
-# Don't know why it is not working in this repository
-# In different repository, exactly the same code works!
-# "bash: syntax error near unexpected token '('
-# ____________________
-# works in "python folder"
-# ____________________
 
 list_of_3digits_numbers = []
 
@@ -19,7 +12,7 @@ def nextline():
 
 def result(N):
     for number in range(N):
-        # 208 is the number of 25 results!! just change N -> 208
+        # 208 is the number of 25 results!! 
         if number % 7 == 0 or number % 9 == 0:
             number_str = str(number)
             number_length = len(str(number))

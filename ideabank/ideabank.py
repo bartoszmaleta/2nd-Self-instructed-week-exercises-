@@ -38,5 +38,3 @@ ideabank.close()
 #     for line in list_of_ideas:
 #         print(line)
 
-
-
