@@ -3,12 +3,20 @@ keep_asking = True
 while keep_asking is True: 
 
     try:
-        first_number = input('Enter a number (or a letter to exit): ')
+        first_number = input('Enter first number (or a letter to exit): ')
         first_number_as_int = int(first_number)
     except ValueError:
+        print('Wrong number')
         exit()
 
-    second_number = input('Enter another number: ')
+    try:
+        second_number = input('Enter second number (or a letter to exit): ')
+        second_number_as_int = int(second_number)
+    except ValueError:
+        print('Wrong number')
+        exit()
+
+    # second_number = input('Enter another number: ')
 
     sign = input('Enter an operation: ')
     
@@ -29,7 +37,11 @@ while keep_asking is True:
         print('Result: ' + product_as_str)
     elif sign == '/':
         second_number_as_int = int(second_number)
-        quotient = first_number_as_int / second_number_as_int
+        try:
+            quotient = first_number_as_int / second_number_as_int
+        except ZeroDivisionError:
+            print('Wrong number')
+        
         quotient_as_str = str(quotient)
         print('Result: ' + quotient_as_str)
     
